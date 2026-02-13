@@ -1,13 +1,13 @@
 context:
-  version: 1.7.1
+  version: "1.7.2"
 
 package:
   name: nest-asyncio2
   version: ${{ version }}
 
 source:
-- url: https://pypi.org/packages/source/n/nest-asyncio2/nest_asyncio2-${{ version }}.tar.gz
-  sha256: a1fe5bbbd20894dcceb1842322d74992c5834d5ab692af2c4f59a9a4fcf75fe8
+  - url: https://pypi.org/packages/source/n/nest-asyncio2/nest_asyncio2-${{ version }}.tar.gz
+    sha256: 1921d70b92cc4612c374928d081552efb59b83d91b2b789d935c665fa01729a8
 
 build:
   script: python -m pip install . -vv
@@ -16,18 +16,18 @@ build:
 
 requirements:
   host:
-  - python ${{ python_min }}.*
-  - setuptools >=42
-  - pip
+    - python ${{ python_min }}.*
+    - setuptools >=42
+    - pip
   run:
-  - python >=${{ python_min }}
+    - python >=${{ python_min }}
 
 tests:
-- python:
-    imports:
-    - nest_asyncio2
-    pip_check: true
-    python_version: ${{ python_min }}.*
+  - python:
+      imports:
+        - nest_asyncio2
+      pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
   homepage: https://github.com/Chaoses-Ib/nest-asyncio2
