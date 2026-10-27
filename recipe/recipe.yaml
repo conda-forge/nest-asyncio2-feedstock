@@ -1,5 +1,5 @@
 context:
-  version: "1.7.3"
+  version: "1.7.4"
 
 package:
   name: nest-asyncio2
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/n/nest-asyncio2/nest_asyncio2-${{ version }}.tar.gz
-    sha256: 2e9a84d5d1efe6d020c72988d21aec569bac42d98af2ff6b9de24640c5d22a34
+    sha256: 995b1409d926ec55e0876ea39a69bffdd8852cf1db3652c177e8c8ffdbcaf3cc
 
 build:
   script: python -m pip install . -vv
